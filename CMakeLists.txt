@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(app main.cpp)
 target_include_directories(app PRIVATE ".")
 
-# target_precompile_headers(app
-#     PRIVATE
-#         "<atomic>"
-# )
+target_precompile_headers(app
+    PRIVATE
+        "<atomic>"
+)
