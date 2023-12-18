@@ -13,7 +13,18 @@
             "displayName": "Auto",
             "description": "Use cmake to find toolchain",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_CXX_COMPILER": "/opt/homebrew/bin/g++-13"
+            }
+        },
+        {
+            "name": "gcc",
+            "inherits": "base",
+            "displayName": "Gcc-137",
+            "description": "Use gcc 13 toolchain",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_CXX_COMPILER": "/opt/homebrew/bin/g++-13"
             }
         },
         {
