@@ -1,0 +1,30 @@
+{
+    "version": 5,
+    "configurePresets": [
+        {
+            "hidden": true,
+            "name": "base",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}"
+        },
+        {
+            "name": "auto",
+            "inherits": "base",
+            "displayName": "Auto",
+            "description": "Use cmake to find toolchain",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "vcpkg",
+            "inherits": "base",
+            "displayName": "vcpkg",
+            "description": "Use VCPKG",
+            "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ]
+}
